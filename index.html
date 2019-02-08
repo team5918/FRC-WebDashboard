@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="css/style.css"/>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pumatrons 5918 - Dashboard Destination: Deep Space</title>
+  </head>
+  <body>
+    <!-- The header contains the Robot Status and time remaining in the match(defaults to 2:30)-->
+    <h1 class="header">
+      <div style="float:left">
+        <p id="status" >
+          <font color="grey">Robot Status:</font>
+          <font color="red" id="status-indicator">Disconnected</font>
+        </p>
+      </div>
+      <div style="float:right">
+        <p style="float:right"><font color="grey" style="font-size: 1.2em" id="timer">2:30</font></p>
+      </div>
+    </h1>
+    <!--The follow container contains the more important driver data and robot data and camera-->
+    <div class="ui-container">
+      <!--This will be a 1/5 of the screen and include auto selection, tripod/claw selection,  battery as percent and battery svg, as well as a video record-->
+      <div class="ui" id="user-data">
+        <!--This is the autonomous selector-->
+        <select name="Auto" class="selector" id="auto-select" >
+          <option value="default">Autonomous</option>
+          <option value="option1">Left</option>
+          <option value="option2">Middle</option>
+          <option value="option3">Right</option>
+        </select>
+        <!-- This is the selector for different mechanisms-->
+        <select name="Mech" class="selector" id="mech-select" >
+          <option value="default">Mechanism</option>
+          <option value="option1">Tripod</option>
+          <option value="option2">Claw</option>
+        </select>
+        <!--These are the buttons to stop and record footage and possible data-->
+        <svg class="playback">
+          <!--Triangle/Record-->
+          <polygon class="record" points="75,50 75,100 125,75" style="fill:green; stroke:red; stroke-width:3px;"></polygon>
+          <!--Hexagon/Stop Record-->
+          <polygon class="record" points="175,50 200,50 215,75 200,100 175,100 160,75" style="fill:red; stroke:green; stroke-width:3px;"></polygon>
+          <!--Battery-->
+          <rect class="record"  y="150" x="60" width="170" height="100" style="outline: white; outline-width: 3px;"></rect>
+        </svg>
+        <!--This is the visual for battery PERCENTAGE, it  is calculated-->
+        <svg class="battery">    
+          <!--Outter layer-->
+          <rect class="battery-box" x="75" y="10" width="125" height="75"></rect>
+          <!--Inner fuel indicator-->
+          <rect class="battery-fuel" x="75" y="80" width="125" height="5"></rect>
+          <!--Pattery percentage -text -->
+          <text id="battery-percent" x="125" y="25" scale="5" fill="white" >0%</text>
+        </svg>
+      </div>
+      <!-- This is the camera showing-->
+      <div class="ui" id="camera"><!--Include one or both cameras height leaves a small bar at bottom if 2 split horizontally-->
+        <!--Image from camera-->
+        <img/>
+      </div>
+      <!--This is the visual demonstration of the robot-->
+      <div class="ui" id="robot-data"><!--This will include the robot svg with direction arrows, gyro, distane sensing,and side view for scissor-->
+        <svg class="robot">
+          <!--Controls the rotation of robot, the angle is the first number/parameter-->
+          <g transform = "rotate(45,164,191)">
+          <!--Outter Chassis-->
+          <rect  x="110" y="120" height="142" width="108"></rect>
+          <!--Wheels-->
+          <rect  x="110" y="120" height="35" width="22"></rect>
+          <rect  x="195" y="120" height="35" width="22"></rect>
+          <rect  x="195" y="225" height="35" width="22"></rect>
+          <rect  x="110" y="225" height="35" width="22"></rect>
+          <!--mechanism arm, move y2 up(subtract) to extend, minimum 55-->
+          <line x1="160" y1="120" x2="160" y2="117" stroke-width="12" stroke="yellow"></line>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <!--This will be error/console out messages-->
+    <footer >
+      <p style="padding-left:10px;">
+        <font color="red" size="4">Console: This is where error messages and console readouts go.</font>
+      </p>
+    </footer>
+  </body>
+</html>

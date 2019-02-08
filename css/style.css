@@ -1,0 +1,110 @@
+
+body{
+    padding-top:1%;
+    padding:0;
+margin:0;
+width:99%;
+height:500;
+    background-color:purple;
+}
+.header{
+ display:-webkit-flex;
+ display:flex;
+ box-shadow: 1px 3px 5px rgb(231, 206, 73);
+ width:100%;
+ margin:0;
+ margin-left:1px;
+ border:5px solid rgb(202, 73, 202); 
+  
+}
+
+#camera{
+    height:inherit;
+    opacity: 85%;
+    flex-basis:50%;
+    background-image:url("url?");
+    border-right:5px solid rgb(202, 73, 202);
+}
+
+.header div{
+    padding-top:0;
+    margin:0;
+    padding-left:10px;
+    padding-right:10px;
+    width:50%;
+    -webkit-flex:1;
+    flex:1;
+}
+p{
+  margin:0;
+}
+.ui-container{
+    width:100%;
+    padding:0;
+    margin-left:1px;
+    display:-webkit-flex;
+    display:flex;
+    margin-right:0;
+    height:422px;
+    border: 5px solid rgb(202, 73, 202);
+}
+.playback{
+    margin-top:15px;
+    border-top:5px solid rgb(202, 73, 202);
+    border-bottom:5px solid rgb(202, 73, 202);
+}
+.robot{
+    padding:0;
+    margin:0;
+    height:100%;
+ 
+}
+.robot rect{
+    outline:5px solid white;
+    padding:00;
+    margin:0;
+    fill:purple;
+}
+
+.battery-fuel{
+    fill:red;
+}
+.battery-box{
+    outline:5px solid white;
+    fill:purple;
+}
+
+.ui{
+    margin:0;
+    flex:1;
+   flex-grow:0;
+   flex-shrink:0;
+}
+#user-data{
+    height:inherit;
+    flex-basis: 20%;
+    border-right: 5px solid rgb(202, 73, 202);
+}
+.selector:hover{
+    background-color: rgb(231, 206, 73);
+    -ms-scrollbar-highlight-color: rgb(231, 241, 86);
+    scrollbar-highlight-color:rgb(231, 206, 73);;
+}
+.record:hover{
+    fill:lightgreen;
+    box-shadow: 0 5px 5px black;
+}
+.selector{
+    margin-top:15%;
+    background-color: rgb(231, 170, 45);
+    text-align: center;
+    margin-left:20%;
+    padding:3px;
+    width:55%;
+}
+footer{
+    height:50px;
+    width:100%;
+    margin-left:1px;
+    border: 5px solid rgb(202, 73, 202);
+}
